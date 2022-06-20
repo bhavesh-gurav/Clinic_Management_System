@@ -1,0 +1,114 @@
+﻿@{
+    ViewBag.Title = "Medicine Records";
+    Layout = null;
+}
+
+ <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src=" https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<style>
+    body {
+    background-image: url('https://images7.alphacoders.com/513/thumb-1920-513904.jpg');
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+
+div #CNAForm {
+    margin-top: 70px;
+}
+
+#CNAForm {
+    box-shadow: 0px 0px 5px gray;
+    border-radius: 13px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding-top: 10px;
+    background-color:floralwhite;
+    opacity: 0.9;
+    margin-top: 0px;
+    padding-bottom: 10px;
+}
+
+i.fa, span {
+    color: black;
+}
+
+span {
+    font-weight: bold;
+}
+</style>
+
+<script type="text/javascript" src="~/js/MedicineManageJS/AddMedicineJS.js"></script>
+
+
+<div class="row" id="mainContainer">
+    <div class="col-sm-offset-3 col-md-offset-4 col-lg-offset-4 col-xs-12 col-sm-6 col-md-4 col-lg-4" id="CNAForm">
+        <center><h3><i class="fa-solid fa-capsules"></i> Add New Medicine</h3><hr /></center>
+
+
+<form>
+        <div class="form-group">
+            <span>Medicine Name:</span><br />
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa-solid fa-pills"></i></span>
+                <input id="TxtMedicineName" type="text" placeholder="Medicine Name.." maxlength="50" class="form-control" />
+            </div>
+            <small id="TxtMedicineNameValidate" class="text-danger"></small>
+        </div>
+
+        <div class="form-group">
+            <span>Manufacturer:</span><br />
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa-solid fa-industry"></i></span>
+                <input id="TxtManufacturerName" type="text" placeholder="Enter Manufacturer Name.." maxlength="50" class="form-control" />
+            </div>
+            <small id="TxtManufacturerNameValidate" class="text-danger"></small>
+        </div>
+
+        <div class="form-group">
+            <span>Price:</span><br />
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa-solid fa-hand-holding-dollar"></i></span>
+                <input id="TxtPrice" type="text" placeholder="Enter Medicine Price.." maxlength="5" class="form-control" />
+            </div>
+            <small id="TxtPriceValidate" class="text-danger"></small>
+        </div>
+
+        <div class="form-group">
+            <span>Expary Date:</span><br />
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa-solid fa-calendar-day"></i></span>
+                <input id="TxtDateId" type="date" class="form-control" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <span>Stock:</span><br />
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa-solid fa-rotate"></i></span>
+                <input id="TxtStock" type="text" placeholder="Enter Medicine Quantity.." maxlength="5" class="form-control" />
+            </div>
+            <small id="TxtStockValidate" class="text-danger"></small>
+        </div>
+        
+        <br />
+        
+        </form>
+        <button type="submit" id="BtnAddMedicine" class="btn btn-lg btn-primary p-2"><i class="bi bi-file-plus-fill"></i>Save</button>
+        <a asp-controller="Medicine" asp-action="MedicineManage" class="btn btn-lg btn-warning p-2">Back To List</a>
+    </div>
+</div>
+
+
+
+@*//for front end validations*@
+
+@section Scripts{
+    @{
+    <partial name="_ValidationScriptsPartial" />
+    }
+}

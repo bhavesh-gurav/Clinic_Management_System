@@ -1,0 +1,48 @@
+﻿
+
+<script type="text/javascript" src="~/js/PrescriptionJS/Prescription.js"></script>
+<br />
+<br />
+<br />
+<body>
+    <center><h2><i class="fa fa-users"></i> All Prescriptions Records</h2></center>
+
+    @*this is view of prescription*@
+    <div>
+        <div class="row">
+            <div class=" col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
+                
+                <hr />
+                <table class="table table-sm " id="tblP1">
+                    <thead>
+                        <tr class="text-center" id="tableid">
+                            <th>
+                                Sr. No.:
+                            </th>
+                            <th>
+                                <i id="DateSortingLink"></i> Prescription Date:
+                            </th>
+                            <th>
+                                <i id="PIDSortingLink"></i> PatientID:
+                            </th>
+                            <th>
+                                <i id="PFNameSortingLink"></i> Patient First Name:
+                            </th>
+                            <th>
+                                <i id="PLNameSortingLink"></i> Patient Last Name:
+                            </th>
+                            <th>
+                                <i id="MedNameSortingLink"></i> Medicine Name:
+                            </th>
+                            <th>
+                                Quantity
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody id="PrescriptionTableBody">
+                    </tbody>
+                </table>
+            </div>
+        </div><hr />
+    </div>
+</body>

@@ -1,0 +1,49 @@
+﻿@{
+    ViewData["Title"] = "Users";
+}
+@model  ICollection<ASP.NETCoreIdentityCustom.Areas.Identity.Data.ApplicationUser>
+
+    
+<style type="text/css">
+    body {
+        background-image: url("https://source.unsplash.com/1600x900/?admin");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+</style>
+
+<div class="text-center">
+    <h1 class="display-4" style="background-color: aliceblue; opacity: 0.8">Users</h1>
+    @if ( @Model != null && @Model.Any())
+    {
+        <table class="table table-sm table-dark">
+            <thead>
+            <tr>
+                <th  style="text-align: center;" scope="col">ID</th>
+                <th  style="text-align: center;" scope="col">First</th>
+                <th  style="text-align: center;" scope="col">Last</th>
+                <th  style="text-align: center;" scope="col">Email</th>
+                <th  style="text-align: center;" scope="col">Edit</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach (var user in Model)
+            {
+            <tr>
+                <td scope="row">@user.Id</td>
+                <td>@user.FirstName</td>
+                <td>@user.LastName</td>
+                <td>@user.Email</td>
+                <td>
+                    <a asp-controller="User" asp-action="Edit" asp-route-id="@user.Id">Edit</a>
+                </td>
+            </tr>
+            }
+            </tbody>
+        </table>
+    }
+</div>
+
+<div class="text-center">
+
+</div>

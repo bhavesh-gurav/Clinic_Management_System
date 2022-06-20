@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Views\Role\Manager.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Views\Role\Manager.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Areas\Identity\Data\ApplicationDbContext.cs" />
+    <Content Include="Areas\Identity\Data\ApplicationUser.cs" />
+    <Content Include="Areas\Identity\Pages\Account\AccessDenied.cshtml.cs" />
+    <Content Include="Areas\Identity\Pages\Account\ExternalLogin.cshtml.cs" />
+    <Content Include="Areas\Identity\Pages\Account\Lockout.cshtml.cs" />
+    <Content Include="Areas\Identity\Pages\Account\Login.cshtml.cs" />
+    <Content Include="Areas\Identity\Pages\Account\LoginWith2fa.cshtml.cs" />
+    <Content Include="Areas\Identity\Pages\Account\LoginWithRecoveryCode.cshtml.cs" />
+    <Content Include="Areas\Identity\Pages\Account\Logout.cshtml.cs" />
+    <Content Include="Areas\Identity\Pages\Account\Register.cshtml.cs" />
+    <Content Include="Areas\Identity\Pages\Account\RegisterConfirmation.cshtml.cs" />
+  </ItemGroup>
+
+</Project>

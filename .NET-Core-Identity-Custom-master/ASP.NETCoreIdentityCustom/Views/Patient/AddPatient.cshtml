@@ -1,0 +1,111 @@
+﻿<style>
+
+    body {
+        background-image: url("https://wallpapercave.com/wp/6Lib88D.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    #CNAForm {
+        box-shadow: 0px 0px 15px red;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        padding-top: 10px;
+    }
+
+    i.fa, span {
+        color: orange;
+    }
+
+    span {
+        font-weight: bold;
+    }
+
+</style>
+
+<script type="text/javascript" src="~/js/PatientJS/AddPatient.js"></script>
+
+@*===============================================================================================================================================================*@
+
+<div class="row">
+
+    <div class="col-sm-offset-3 col-md-offset-4 col-lg-offset-2 col-xs-12 col-sm-6 col-md-4 col-lg-4" id="CNAForm">
+
+        <form method="post">
+            <center><h4 style="color: white; font-weight:bold"><i class="fa fa-users"></i> Add New Patient</h4><hr /></center>
+
+            <div class="form-group">
+                <span>First Name:</span><br />
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                    <input id="TxtFName" type="text" placeholder="Enter First Name Here.." maxlength="20" class="form-control" />
+                </div>
+                <small id="TxtFNameValidate" class="text-danger"></small>
+            </div>
+
+            <div class="form-group">
+                <span>Last Name:</span><br />
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                    <input id="TxtLName" type="text" placeholder="Enter Last Name Here.." maxlength="20" class="form-control" />
+                </div>
+                <small id="TxtLNameValidate" class="text-danger"></small>
+            </div>
+
+            <div class="form-group">
+                <span>Email Id.:</span><br />
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-envelope"></i> </span>
+                    <input id="TxtEmailId" type="text" placeholder="Enter Email Id  Here.." class="form-control" />
+                </div>
+                <small id="TxtEmailIdValidate" class="text-danger"></small>
+            </div>
+
+            <div class="form-group">
+                <span>Address:</span><br />
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-key"></i></span>
+                    <input id="TxtAddress" type="text" placeholder="Enter Address Here.." class="form-control" />
+                </div>
+                <small id="TxtAddressValidate" class="text-danger"></small>
+            </div>
+
+            <div class="form-group">
+                <span>Symptoms:</span><br />
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-medkit"></i></span>
+                    <input id="TxtSymptoms" placeholder="Enter Symptoms Here.." class="form-control" />
+                </div>
+                <small id="TxtSymptomsValidate" class="text-danger"></small>
+            </div>
+
+            <div class="form-group">
+                <span> Contact No:</span><br />
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-address-book-o "></i> +91</span>
+                    <input id="TxtContactNo" type="text" placeholder="Enter Contact No Here.." maxlength="10" class="form-control" />
+                </div>
+                <small id="TxtContactNoValidate" class="text-danger"></small>
+            </div>
+            <div class="form-group">
+                <span>IsFollowUp:</span><br />
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-arrow-up"></i> </span>
+                    <select id="DDL_IsFollowUp" class="form-control">
+                        <option value='N'>No</option>
+                        <option value='Y'>Yes</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <a class="btn btn-danger" id="BtnSignUp"><i class="fa fa-user-plus" style="color:#FFFFFF;"></i> Add Patient</a>
+                <a asp-controller="Patient" asp-action="PatientDashboard" class="btn btn-lg btn-warning p-2">Back To List</a>
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
